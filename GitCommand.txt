@@ -1,0 +1,32 @@
+git init
+git status
+git add <filename> 
+or
+git add . 
+
+git commit -m "message to commit"
+
+git remote add origin ""  // need to copy repository from your git account 
+git push origin master
+git clone "<url>"
+git pull
+
+
+git branch <name-of-branch>
+git branch //list of branch
+git branch -D <name-of-branch>
+
+git checkout <name-of-branch>
+git log
+git stash
+git stash pop
+
+git revert <commit-id>
+git diff <commit-id of version x> <commit-id of version y> // commit id can be get from git log
+git diff HEAD . // what we are go to change in git
+
+
+
+
+
+

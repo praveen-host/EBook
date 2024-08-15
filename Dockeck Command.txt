@@ -1,0 +1,15 @@
+sudo docker pull <imagename>
+sudo docker pull ubuntu
+sudo docker images
+sudo docker run -it -d <imagename> 
+sudo docker ps
+sudo docker ps -a // if there are any stop container that can be seen by adding "-a"
+sudo docker exec -it <container-id> bash 	//for logging in into the container, one can use the exec command
+sudo docker stop <container-id>
+sudo docker kill <container-id>
+sudo docker rm <container-id>
+sudo docker rmi <image-id>
+
+hub.docker.com
+
+

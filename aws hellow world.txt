@@ -1,0 +1,54 @@
+
+
+#!/bin/bash
+# Use this for your user data (script from top to bottom)
+# install httpd (Linux 2 version)
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
+
+
+------DotNet ----------------
+#!/bin/bash
+rpm -Uvh https://packages.microsoft.com/centos/7/prod/packages-microsoft-prod.rpm
+yum install dotnet-sdk-3.1 -y
+
+------jenkin---------------
+
+sudo yum update
+sudo yum install java-1.8.0
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+
+sudo yum install jenkins
+sudo service jenkins start
+
+--to get password
+sudo su -
+cd /var/lib/jenkins/secrets/
+cat initialAdminPassword
+e15cce9fa9864b79be60cc127b5a5ec8
+
+To start jenkins on a diff port
+Update port number in /etc/sysconfig/jenkins
+
+
+To fetch initial admin password
+ sudo su -
+ cd /var/lib/jenkins/secrets/
+ cat initialAdminPassword
+0bcbbcab7f984af7b4171b55e9201d04
+To stop Jenkins
+ sudo service jenkins stop
+
+To uninstall Jenkins
+ sudo service jenkins stop
+ sudo yum remove jenkins
+ sudo rm -r /var/lib/jenkins
+
+
+AWS Certified Developer course
+
+
